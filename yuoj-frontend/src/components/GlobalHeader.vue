@@ -45,11 +45,12 @@ router.afterEach((to, from, failure) => {
 
 const store = useStore();
 
-setTimeout(() => {
+/*setTimeout(() => {
   store.dispatch("user/getLoginUser", {
     userName: "Yuqing",
+    role: "admin",
   });
-}, 3000);
+}, 3000);*/
 
 const doMenuClick = (key: string) => {
   router.push({
