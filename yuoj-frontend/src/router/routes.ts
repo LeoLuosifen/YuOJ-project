@@ -2,12 +2,21 @@ import { RouteRecordRaw } from "vue-router";
 import Home from "@/views/HomeView.vue";
 import AdminView from "@/views/AdminView.vue";
 import NoAuthView from "@/views/NoAuthView.vue";
+import ACCESS_ENUM from "@/access/accessEnum";
 
 export const routes: Array<RouteRecordRaw> = [
   {
     path: "/",
     name: "浏览题目",
     component: Home,
+  },
+  {
+    path: "/hide",
+    name: "隐藏页面",
+    component: Home,
+    meta: {
+      hideMenu: true,
+    },
   },
   {
     path: "/noAuth",
@@ -19,7 +28,7 @@ export const routes: Array<RouteRecordRaw> = [
     name: "管理员页面",
     component: AdminView,
     meta: {
-      access: "canAdmin",
+      access: ACCESS_ENUM.ADMIN,
     },
   },
   {
