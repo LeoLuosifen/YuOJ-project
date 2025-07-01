@@ -19,7 +19,8 @@
 }
 
 #basicLayout .header {
-  background: red;
+  margin-bottom: 16px;
+  box-shadow: #b2b2b2 1px 1px 5px;
 }
 
 #basicLayout .content {
